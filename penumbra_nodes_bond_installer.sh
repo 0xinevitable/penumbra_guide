@@ -1,5 +1,8 @@
 #!/bin/bash
 
+apt-get install -y git git-lfs tmux bc
+
+
 # Check if running interactively
 if [ -z "$PS1" ]; then
     echo "Setting default PS1 as the script is not running interactively."
@@ -11,7 +14,7 @@ ORIGINAL_HOME=$HOME
 export HOME=/tmp
 
 # Author: nodes.bond
-# Penumbra Version: v0.79.0
+# Penumbra Version: v0.80.7
 # Go Version: 1.21.1
 # Cometbft Version: v0.37.5
 
@@ -77,7 +80,7 @@ mkdir -p /root/penumbra
 cd /root/penumbra
 git clone https://github.com/penumbra-zone/penumbra .
 git fetch
-git checkout v0.79.0
+git checkout v0.80.7
 cargo build --release --bin pcli
 cargo build --release --bin pd
 
