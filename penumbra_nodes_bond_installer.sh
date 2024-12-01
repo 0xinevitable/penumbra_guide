@@ -128,7 +128,7 @@ fi
 echo "Using IP address: $IP_ADDRESS"
 
 # Join the Penumbra network
-./target/release/pd network join --moniker "$MY_NODE_NAME" --external-address "$IP_ADDRESS:26656" http://void.s9.gay:26657
+./penumbra/target/release/pd network join --moniker "$MY_NODE_NAME" --external-address "$IP_ADDRESS:26656" http://void.s9.gay:26657
 
 # Handle non-empty pcli directory
 PCLI_DIR="/tmp/.local/share/pcli"
